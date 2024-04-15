@@ -8,8 +8,20 @@
     <h2>Connected Users:</h2>
     <ul id="userList"></ul>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
-    <script src="client.js"></script> <!-- Make sure client.js is included here -->
+    <script>
+
+    const userText = document.getElementByID("usernameInput");
+    let username = userText.value;
+    let users = [];
+    function connectedUsers(){
+    users.push(username);
+    console.log(users.length())
+    }
+
+        
+    </script>
+   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+    <script src="client.js"></script> Make sure client.js is included here -->
 </body>
 
 
