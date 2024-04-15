@@ -5,16 +5,17 @@
         <button onClick="connectedUsers()">Set Username</button>
     </form>
     <p style="width: 10px; height: 10px; background: green;"> <span id="totalUsers">0</span></p>
-    <h2>Connected Users:</h2>
+    <h2 id="numUsers">Connected Users: </h2>
     <ul id="userList"></ul>
 
     <script>
-
+    const num = document.getElementById("numUsers");
     const userText = document.getElementById("usernameInput");
     let username = userText.value;
     let users = [];
     function connectedUsers(){
     users.push(username);
+    num.innerText += users.length
     console.log(users.length)
     }
 
